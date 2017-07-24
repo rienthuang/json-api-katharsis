@@ -1,0 +1,8 @@
+server:
+  context-path: /ryan
+  port: 9090
+
+katharsis:
+  resourcePackage: com.sc.agile
+  domainName: http://localhost:9090/ryan
+  pathPrefix: /api
