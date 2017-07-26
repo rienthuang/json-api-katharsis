@@ -3,7 +3,9 @@ package com.sc.agile.database;
 import com.sc.agile.model.Project;
 import com.sc.agile.model.Task;
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -13,7 +13,6 @@ import java.util.Map;
 @Component
 public class TaskRepository extends ResourceRepositoryBase<Task, Long> {
 
-    @Autowired
     private DBSimulator dbSimulator = new DBSimulator();
 
     private Map<Long, Task> tasks;

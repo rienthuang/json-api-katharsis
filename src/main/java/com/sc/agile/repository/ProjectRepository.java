@@ -13,8 +13,8 @@ import java.util.Map;
 @Component
 public class ProjectRepository extends ResourceRepositoryBase<Project, Long>{
 
-    @Autowired
     private DBSimulator dbSimulator = new DBSimulator();
+
     private Map<Long, Project> projects;
 
     public ProjectRepository(){
