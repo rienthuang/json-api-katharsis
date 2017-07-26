@@ -15,7 +15,7 @@ public class ProjectRepository extends ResourceRepositoryBase<Project, Long>{
 
     @Autowired
     private DBSimulator dbSimulator = new DBSimulator();
-    Map<Long, Project> projects;
+    private Map<Long, Project> projects;
 
     public ProjectRepository(){
         super(Project.class);
@@ -26,6 +26,11 @@ public class ProjectRepository extends ResourceRepositoryBase<Project, Long>{
     public synchronized <S extends Project> S save(S project) {
         projects.put(project.getProjectId(), project);
         return project;
+    }
+
+    @Override
+    public synchronized Project findOne(Long id, QuerySpec querySpec){
+        return projects.get(id);
     }
 
     @Override
